@@ -1,0 +1,1 @@
+mysqldump -uroot -p wordpressst4 > wordpressst4_auto.sql
