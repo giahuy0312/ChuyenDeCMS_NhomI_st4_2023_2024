@@ -71,8 +71,23 @@
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	<?php dynamic_sidebar( 'footer-3' ); ?>
-				
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<div class="footer"style="background-color: #007b5e; color:white; ">
+		<div class="container" style="padding-top: 100px;">
+			<div class="row">
+				<div class="col-md-4">
+					<?php dynamic_sidebar( 'footer-1' ); ?>
+				</div>
+				<div class="col-md-4" >
+					<?php dynamic_sidebar( 'footer-2' ); ?>
+				</div>
+				<div class="col-md-4" >
+					<?php dynamic_sidebar( 'footer-3' ); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
 </div><!-- #page -->
 <?php wp_footer(); ?>
