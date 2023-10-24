@@ -360,7 +360,6 @@ function twenty_twenty_one_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-
 	// Archive module 11
 	register_sidebar(
 		array(
