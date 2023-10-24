@@ -360,6 +360,28 @@ function twenty_twenty_one_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer-3', 'twentytwentyone' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer-test', 'twentytwentyone' ),
+			'id'            => 'footer-ts',
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
 
@@ -650,3 +672,15 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 		return __( ', ', 'twentytwentyone' );
 	}
 endif;
+//THEM TINH NANG CHEN CODE PHP VAO WIDGET
+add_filter('widget_text','execute_php',100);
+function execute_php($html){
+if(strpos($html,"<"."?php")!==false){
+ob_start();
+eval("?".">".$html);
+$html=ob_get_contents();
+ob_end_clean();
+}
+return $html;
+}
+	

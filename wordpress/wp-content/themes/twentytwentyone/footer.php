@@ -15,7 +15,6 @@
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- #content -->
-
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 	<footer id="colophon" class="site-footer">
@@ -72,9 +71,10 @@
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	<?php dynamic_sidebar( 'footer-3' ); ?>
+				
 
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 
 </body>
