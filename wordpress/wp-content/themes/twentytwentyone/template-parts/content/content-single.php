@@ -10,6 +10,7 @@
  */
 
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -17,8 +18,11 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
-
-	<div class="entry-content">
+	<div class="entry-content row">
+		<div class="col-md-4">
+				
+		</div>
+		<div class="col-md-4">
 		<?php
 		the_content();
 
@@ -31,6 +35,17 @@
 			)
 		);
 		?>
+		</div>
+		<div class="col-md-4">
+			<div class="row ">
+				<div class="col-md-4 border border-bottom-0">
+					<?php dynamic_sidebar( 'archive' ); ?>
+				</div>
+				<div class="col-md-4 ">
+					<?php dynamic_sidebar( 'archive' ); ?>
+				</div>
+			</div>	
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
