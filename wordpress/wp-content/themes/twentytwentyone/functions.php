@@ -361,11 +361,11 @@ function twenty_twenty_one_widgets_init() {
 		)
 	);
 
-	// Category Module 9
+	// Comment module 8
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Category', 'twentytwentyone' ),
-			'id'            => 'category',
+			'name'          => esc_html__( 'Comment-8', 'twentytwentyone' ),
+			'id'            => 'comment-8',
 			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
