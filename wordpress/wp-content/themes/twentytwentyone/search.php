@@ -25,6 +25,7 @@ if ( have_posts() ) {
 		</h1>
 	</header><!-- .page-header -->
 
+			
 	<div class="search-result-count default-max-width">
 		<?php
 		printf(
@@ -41,25 +42,37 @@ if ( have_posts() ) {
 		);
 		?>
 	</div><!-- .search-result-count -->
-	<?php
-	// Start the Loop.
-	while ( have_posts() ) {
-		the_post();
 
-		/*
-		 * Include the Post-Format-specific template for the content.
-		 * If you want to override this in a child theme, then include a file
-		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-		 */
-		get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
-	} // End the loop.
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<div class="row">
+		<div class="col-md-3">
+			
+		</div>
+		<div class="col-md-6">
+			<?php
+			// Start the Loop.
+			while ( have_posts() ) {
+				the_post();
 
-	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
+				/*
+				* Include the Post-Format-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				*/
+				get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
+			} // End the loop.
 
-	// If no content, include the "No posts found" template.
-} else {
-	get_template_part( 'template-parts/content/content-none' );
-}
+			// Previous/next page navigation.
+			twenty_twenty_one_the_posts_navigation();
 
-get_footer();
+			// If no content, include the "No posts found" template.
+		} else {
+			get_template_part( 'template-parts/content/content-none' );
+		}
+		?>
+		</div>
+		<div class="col-md-3">
+			<?php dynamic_sidebar( 'comment-14' ); ?>
+		</div>
+	</div>
+<?php get_footer(); ?>
