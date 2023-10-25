@@ -366,7 +366,7 @@ function twenty_twenty_one_widgets_init()
 	register_sidebar(
 		array(
 			'name'          => esc_html__('Recent Post', 'twentytwentyone'),
-			'id'            => 'sidebar-2',
+			'id'            => 'recent-post',
 			'description'   => esc_html__('Add widgets here to appear in your footer.', 'twentytwentyone'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -376,8 +376,8 @@ function twenty_twenty_one_widgets_init()
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Recent Post #15', 'twentytwentyone'),
-			'id'            => 'sidebar-3',
+			'name'          => esc_html__('Last Post', 'twentytwentyone'),
+			'id'            => 'last-post',
 			'description'   => esc_html__('Add widgets here to appear in your footer.', 'twentytwentyone'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -389,9 +389,9 @@ function twenty_twenty_one_widgets_init()
 	// Category Module 9
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Category', 'twentytwentyone' ),
+			'name'          => esc_html__('Category', 'twentytwentyone'),
 			'id'            => 'category',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'twentytwentyone' ),
+			'description'   => esc_html__('Add widgets here to appear in your footer.', 'twentytwentyone'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -703,4 +703,3 @@ if (!function_exists('wp_get_list_item_separator')) :
 		return __(', ', 'twentytwentyone');
 	}
 endif;
-

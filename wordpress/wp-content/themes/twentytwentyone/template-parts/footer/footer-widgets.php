@@ -16,11 +16,11 @@ if (is_active_sidebar('sidebar-1')) : ?>
 
 <?php
 endif;
-
-if (is_active_sidebar('sidebar-2')) : ?>
+if (is_active_sidebar('recent-post')) : ?>
 
 	<aside class="widget-area">
-		<?php dynamic_sidebar('sidebar-2'); ?>
+		<?php dynamic_sidebar('recent-post');
+		?>
 	</aside><!-- .widget-area -->
 
 <?php
