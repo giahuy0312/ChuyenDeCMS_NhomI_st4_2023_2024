@@ -71,18 +71,20 @@
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<div class="footer"style="background-color: #007b5e;">
 		<div class="container" style="padding-top: 100px;">
 			<div class="row">
 				<div class="col-md-4">
-					<?php dynamic_sidebar( 'footer-1' ); ?>
+				<?php dynamic_sidebar( 'footer-1' ); ?>
 				</div>
 				<div class="col-md-4" >
 					<?php dynamic_sidebar( 'footer-2' ); ?>
 				</div>
 				<div class="col-md-4" >
-					<?php dynamic_sidebar( 'footer-3' ); ?>
+					<i class="fa fa-angle-double-right"><?php dynamic_sidebar( 'footer-3' ); ?></i>
 				</div>
 			</div>
 		</div>
