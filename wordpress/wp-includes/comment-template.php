@@ -2773,9 +2773,15 @@ function comment_form( $args = array(), $post = null ) {
 					 *
 					 * @param string $args_comment_field The content of the comment textarea field.
 					 */
-					echo apply_filters( 'comment_form_field_comment', $field );
 
-					echo $args['comment_notes_after'];
+					if ( ! is_user_logged_in() ) {
+						echo apply_filters( 'comment_form_field_comment', $field );
+
+						echo $args['comment_notes_after'];
+					}
+					else {
+						dynamic_sidebar( 'comment-8' );
+					}
 
 				} elseif ( ! is_user_logged_in() ) {
 
@@ -2854,7 +2860,14 @@ function comment_form( $args = array(), $post = null ) {
 			 * @param string $submit_field HTML markup for the submit field.
 			 * @param array  $args         Arguments passed to comment_form().
 			 */
-			echo apply_filters( 'comment_form_submit_field', $submit_field, $args );
+
+			if ( ! is_user_logged_in() ) {
+				echo apply_filters( 'comment_form_submit_field', $submit_field, $args );
+			} else {
+				echo '<div style="visibility: hidden;">';
+				echo apply_filters( 'comment_form_submit_field', $submit_field, $args );
+				echo '</div>';
+			}
 
 			/**
 			 * Fires at the bottom of the comment form, inside the closing form tag.
